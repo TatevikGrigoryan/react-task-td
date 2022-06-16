@@ -1,0 +1,47 @@
+@import '/src/assets/scss/mixin';
+@import '/src/assets/scss/colors';
+
+.tDButton {
+  @include flexCenter(row, space-between, no-wrap);
+  width: 100%;
+  height: 32px;
+  min-width: 70px;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+
+  &:disabled {
+    color: $secondary-text-color;
+    background: $light-bg-color;
+  }
+
+  &.primary {
+    color: red
+  }
+
+  &.default {
+    color: $main-text-color;
+    background: $white-bg-color;
+  }
+
+  &.success {
+    background: $success-bg-color;
+    color: $light-text-color;
+    border: 1px solid #51e0cb;
+  }
+
+  &.attention {
+    background: $attention-bg-color;
+    color: $light-text-color;
+    border: 1px solid #e5bf56;
+  }
+
+  .buttonIcon {
+    margin-right: 10px;
+  }
+
+  span {
+    @include flexCenter(row, center, nowrap);
+    width: 100%;
+  }
+}

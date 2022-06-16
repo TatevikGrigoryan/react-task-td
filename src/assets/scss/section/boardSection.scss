@@ -1,0 +1,14 @@
+@import '/src/assets/scss/mixin';
+@import '/src/assets/scss/colors';
+
+.boardSection {
+  width: 100%;
+  @include flex(column, no-wrap);
+
+  &__content {
+    @include flex(row, no-wrap);
+    flex: 1;
+    height: 100%;
+    width: 100%;
+  }
+}

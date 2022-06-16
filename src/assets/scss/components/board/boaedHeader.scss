@@ -1,0 +1,27 @@
+@import '/src/assets/scss/mixin';
+@import '/src/assets/scss/colors';
+
+.boardHeader {
+  @include flexCenter(row, space-between, no-wrap);
+  height: 38px;
+  padding: 5px 20px;
+  -webkit-box-shadow: 0px 5px 6px -6px rgba(34, 60, 80, 0.6);
+  -moz-box-shadow: 0px 5px 6px -6px rgba(34, 60, 80, 0.6);
+  box-shadow: 0px 5px 6px -6px rgba(34, 60, 80, 0.6);
+
+  h1 {
+    color: #1b2657;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .avatar {
+    @include flexCenter(row, center, no-wrap);
+    height: 30px;
+    width: 30px;
+    background: $primary-theme-color;
+    border-radius: 50%;
+    color: $light-text-color;
+    font-size: 14px;
+  }
+}

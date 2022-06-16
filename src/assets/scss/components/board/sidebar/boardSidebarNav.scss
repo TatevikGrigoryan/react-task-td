@@ -1,0 +1,62 @@
+@import '/src/assets/scss/colors';
+@import '/src/assets/scss/mixin';
+
+.boardSidebarNav {
+  width: 100%;
+  padding: 20px 0;
+
+  a {
+    color: inherit;
+    text-decoration: unset;
+  }
+
+  .menuHeader {
+    @include flexCenter(row, flex-start, no-wrap);
+    height: 40px;
+    cursor: pointer;
+    padding: 0 30px;
+
+    span {
+      margin-left: 8px;
+    }
+
+    &__active {
+      background: $hover-bg-color;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    border-left: thin solid #3a798a;
+    padding: 8px 0;
+    margin: 0 38px;
+
+    li {
+      @include flexCenter(row, flex-start, no-wrap);
+      cursor: pointer;
+      height: 40px;
+      font-size: 16px;
+      font-weight: 500;
+
+      .separator {
+        width: 10px;
+        border-bottom: thin solid #3a798a;
+      }
+
+      .subMenuItem {
+        @include flexCenter(row, flex-start, no-wrap);
+        height: 100%;
+        width: 100%;
+        padding: 0 12px;
+
+        &__active {
+          background: $hover-bg-color;
+        }
+      }
+
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+}

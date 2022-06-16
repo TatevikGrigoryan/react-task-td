@@ -1,0 +1,20 @@
+@import '/src/assets/scss/colors';
+@import '/src/assets/scss/mixin';
+
+.boardSidebar {
+  @include flexCenter(column, space-between, no-wrap);
+  max-width: 250px;
+  width: 100%;
+  background: $primary-theme-color;
+  color: $light-text-color;
+
+  .sidebarFooter {
+    @include flexCenter(column, center, no-wrap);
+    width: 100%;
+    padding: 15px 0;
+
+    button {
+      max-width: 50px;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import 'src/assets/scss/colors';
+@import 'src/assets/scss/mixin';
+
+.tDTable {
+  width: 100%;
+
+  tr, th, td {
+    text-align: left;
+    height: 40px;
+    background: $white-bg-color;
+  }
+
+  td, th {
+    padding: 0 12px;
+    min-width: 200px;
+  }
+
+  td:last-child,
+  th:last-child {
+    min-width: unset;
+    max-width: 20px;
+  }
+
+  td {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    &:first-child {
+      flex: 4;
+      color: #285e6c
+    }
+  }
+
+  .option {
+    position: relative;
+    @include flexCenter(row, flex-end, nowrap);
+    max-width: 20px;
+    color: $main-text-color;
+    min-width: unset;
+    svg {
+      cursor: pointer;
+    }
+
+    .optionMenuWrapper {
+      @include flex(column, nowrap);
+      position: absolute;
+      bottom: -67px;
+      padding: 8px 12px;
+      background: $white-bg-color;
+      -webkit-box-shadow: -1px 2px 12px 0px rgba(34, 60, 80, 0.6);
+      -moz-box-shadow: -1px 2px 12px 0px rgba(34, 60, 80, 0.6);
+      box-shadow: -1px 2px 12px 0px rgba(34, 60, 80, 0.6);
+      border-radius: 5px;
+      color: $main-text-color;
+      z-index: 1;
+
+      .disable {
+        color: $secondary-text-color;
+      }
+
+      & > div {
+        margin: 4px 0;
+        cursor: pointer;
+        display: flex;
+
+        span {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  .no-data {
+    @include flexCenter(row, center, nowrap);
+    font-size: 18px;
+
+    td {
+      width: 100%;
+      color: $secondary-text-color;
+      display: flex;
+      justify-content: center;
+      white-space: nowrap;
+    }
+  }
+
+  .rowEditWrapper {
+    & > div {
+      margin: 0 8px;
+    }
+  }
+}

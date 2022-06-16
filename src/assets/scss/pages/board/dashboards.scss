@@ -1,0 +1,27 @@
+@import 'src/assets/scss/colors';
+@import 'src/assets/scss/mixin';
+
+.dashboards {
+  padding: 8px 20px;
+  background: $light-bg-color;
+  width: 100%;
+
+  h1 {
+    color: $main-text-color,
+  }
+
+  &__addBoardWrapper {
+    @include flexCenter(row, flex-end, nowrap);
+    background: $white-bg-color;
+    padding: 8px 15px;
+    min-height: 38px;
+  }
+
+  &__tableWrapper {
+    margin-top: 20px;
+
+    tr {
+      display: flex;
+    }
+  }
+}

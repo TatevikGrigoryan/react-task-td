@@ -1,0 +1,32 @@
+@import 'src/assets/scss/mixin';
+@import 'src/assets/scss/colors';
+
+.addOrEditDashboard {
+  @include flexCenter(row, center, nowrap);
+  background: $white-bg-color;
+  min-height: 38px;
+  width: 100%;
+
+  &__inputsWrapper {
+    display: flex;
+    flex: 1;
+  }
+
+  .tDInput {
+    flex: 1;
+    margin-right: 10px;
+  }
+  .tDButton {
+    max-width: 200px;
+  }
+
+  .buttonsWrapper {
+    @include flexCenter(row, space-between, nowrap);
+    flex: 1;
+    max-width: 400px;
+
+    button:first-child {
+      margin-right: 8px;
+    }
+  }
+}
